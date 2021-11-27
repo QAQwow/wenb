@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+       *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        body,html{
+            height: 100%;
+        }
+        .wrap{
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+         /* border: 3px solid #000;  */
+            transform-style: preserve-3d;
+            /* transform: rotateX(0deg) rotateY(0deg); */
+           animation: divgo 10s infinite;
+            
+    }
+    @keyframes divgo{
+        0%{
+            transform: rotateX(0deg) rotateY(0deg) ;
+        }
+        100%{
+            transform: rotateY(360deg) rotateX(360deg);
+        }
+    }
+    .wrap li{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            opacity: 0.5;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 1px solid #000;
+    }
+    .li01{
+        transform: translatez(100px);
+    }
+    .wrap:hover .li01{
+        transform: translatez(200px) scale(0.8);
+    }
+    .li02{
+        transform: translatez(-100px);
+    }
+    .wrap:hover .li02{
+        transform: translatez(-200px) scale(0.8);
+    }
+    .li03{
+        transform: rotateY(90deg) translateZ(100px) ;
+    }
+    .wrap:hover .li03{
+        transform: rotateY(90deg) translateZ(200px) scale(0.8);
+    }
+    .li04{
+        transform: rotateY(90deg) translateZ(-100px);
+    }
+    .wrap:hover .li04{
+        transform: rotateY(90deg) translateZ(-200px) scale(0.8);
+    }
+   .li05{
+        transform: rotateX(90deg) translateZ(100px);
+   }
+   .wrap:hover .li05{
+        transform: rotateX(90deg) translateZ(200px) scale(0.8);
+   }
+   .li06{
+        transform: rotateX(90deg) translateZ(100px);
+   }
+   .wrap:hover .li06{
+        transform: rotateX(90deg) translateZ(-200px) scale(0.8); 
+   }
+   .background{
+          width: 200px;
+          height: 200px;
+           position: fixed;
+           left: 0;
+           right: 0;
+           top: 0;
+            bottom: 0;
+            margin: auto;
+            /* background: green; */
+            opacity: 0;
+            transition: all 1s;
+      }
+      .wrap:hover .background{
+          opacity: 1;
+      }
+        .left{
+            width: 100px;
+            height: 100px;
+            background:#d5083b;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            border-radius:50px;
+            z-index:3;
+            animation:heart-beat 0.6s ease infinite;
+            background:linear-gradient(to left top,#ee0a44 0%,#d5083b 40%);
+        }
+        .right{
+            width: 100px;
+            height: 100px;
+            background:#d5083b;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            transform:scale(1);
+            z-index:2;
+            border-radius:50px;
+            animation:heart-beat 0.6s ease infinite;
+            background:linear-gradient(to left top,#ee0a44 0%,#d5083b 40%);
+  
+        }
+        .bottom{
+            width: 100px;
+            height: 100px;
+            background:#d5083b;
+            position: absolute;
+            top: 60px;
+            left: 50px;
+            z-index:1;
+            transform:rotate(45deg) scale(1);
+            animation:heart-beat 0.6s ease infinite;
+            background:linear-gradient(to left top,#ee0a44 0%,#d5083b 40%);
+        } 
+
+        @keyframes heart-beat{
+                0%{
+                   transform:rotate(45deg) scale(1);
+                   box-shadow:0px 0px 40px -4px #d5083b;
+                   }
+                50%{
+                   transform:rotate(45deg) scale(1.1);
+                   box-shadow:5px 5px 40px 10px #d5083b;
+                   }
+                100%{
+                   transform:rotate(45deg) scale(1);
+                   box-shadow:0px 0px 40px -4px #d5083b;
+                   }
+               }
+
+</style>
+<body>
+    <div class="wrap">
+         <div class="background"> 
+                          <div class="left"></div>
+                          <div class="right"></div>
+                          <div class="bottom"></div>
+           </div>
+        <ul>
+            <li class="li01"></li>
+            <li class="li02"></li>
+            <li class="li03"></li>
+            <li class="li04"></li>
+            <li class="li05"></li>
+            <li class="li06"></li>
+        </ul>
+    </div>
+</body>
+</html>

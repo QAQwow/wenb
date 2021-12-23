@@ -46,6 +46,9 @@
             width: 200px;
             height: 200px;
             background: pink;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             opacity: 0.5;
             position: absolute;
             left: 0;
@@ -91,7 +94,7 @@
         transform: rotateX(90deg) translateZ(-200px) scale(0.8); 
    }
    .background{
-          width: 200px;
+          width: 600px;
           height: 200px;
            position: fixed;
            left: 0;
@@ -106,45 +109,6 @@
       .wrap:hover .background{
           opacity: 1;
       }
-      .left{
-            width: 100px;
-            height: 100px;
-            background:#d5083b;
-            position: absolute;
-            top: 30px;
-            left: 20px;
-            border-radius:50px;
-            z-index:3;
-            animation:heart-beat 0.6s ease infinite;
-            background:linear-gradient(to left top,#ee0a44 0%,#d5083b 40%);
-        }
-        .right{
-            width: 100px;
-            height: 100px;
-            background:#d5083b;
-            position: absolute;
-            top: 30px;
-            right: 20px;
-            transform:scale(1);
-            z-index:2;
-            border-radius:50px;
-            animation:heart-beat 0.6s ease infinite;
-            background:linear-gradient(to left top,#ee0a44 0%,#d5083b 40%);
-  
-        }
-        .bottom{
-            width: 100px;
-            height: 100px;
-            background:#d5083b;
-            position: absolute;
-            top: 60px;
-            left: 50px;
-            z-index:1;
-            transform:rotate(45deg) scale(1);
-            animation:heart-beat 0.6s ease infinite;
-            background:linear-gradient(to left top,#ee0a44 0%,#d5083b 40%);
-        } 
-
         @keyframes heart-beat{
                 0%{
                    transform:rotate(45deg) scale(1);
@@ -163,18 +127,17 @@
 <body>
     <div class="wrap">
          <div class="background"> 
-                          <div class="left"></div>
-                          <div class="right"></div>
-                          <div class="bottom"></div>
+            <h1>Today is f**king creazy Thursday，Who invited me to eat ?</h1>
            </div>
         <ul style="transform-style:preserve-3d;height: 200px;">
-            <li class="li01"></li>
-            <li class="li02"></li>
-            <li class="li03"></li>
-            <li class="li04"></li>
-            <li class="li05"></li>
-            <li class="li06"></li>
+            <li class="li01">Creazy Thursady</li>
+            <li class="li02">Creazy Thursady</li>
+            <li class="li03">Creazy Thursady</li>
+            <li class="li04">Creazy Thursady</li>
+            <li class="li05">Creazy Thursady</li>
+            <li class="li06">Creazy Thursady</li>
         </ul>
+
     </div>
 </body>
 </html>
